@@ -1,0 +1,260 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:Boricua;
+}
+@font-face{
+    font-family:Boricua;
+    src:url(../fonts/Boricua.ttf);
+}
+@font-face{
+    font-family:varsity;
+    src:url(../fonts/Varsity.ttf);
+}
+body{
+    width:100%;
+    height:100%;
+}
+#loader{
+    width:100%;
+    height:100vh;
+    background:#000 url(../port-img/loading-38.gif) no-repeat center;
+    position:fixed;
+    z-index:3;
+}
+/*Navigation abr styling starts*/
+#nav{
+    background-color:white;
+    font-size:30px;
+    border:none;
+    padding:10px 0px;
+}
+#nav .container .navbar-header .change .two,
+#nav .container .navbar-header .change.open .one,
+#nav .container .navbar-header .change.open .three{
+    transition:transform 0.3s ease-in;
+}
+/*Animation for menu-button*/
+#nav .container .navbar-header .change.open .two{
+    transform:translateX(-20px);
+    opacity:0;
+}
+#nav .container .navbar-header .change.open .one{
+    transform:rotate(40deg) translateX(4px) translateY(5px);
+}
+#nav .container .navbar-header .change.open .three{
+    transform:rotate(-40deg) translateX(2px) translateY(-5px);
+}
+/*Animation for menu-button*/
+#nav .container .navbar-header a{
+    font-size:70px;
+    font-family:varsity;
+    color:#000;
+    animation:lightSpeedInRight;
+    animation-duration:3s;
+}
+#nav .container .collapse ul li{
+    display:block;
+    position:relative;
+    animation:lightSpeedInLeft;
+    animation-duration:3s;
+}
+#nav .container .collapse ul li:after{
+    content:'';
+    position:absolute;
+    background-color:#000;
+    height:2px;
+    width:82%;
+    height:80%;
+    left:10%;
+    top:10%;
+    transform:scaleX(0);
+    transition:all 0.5s ease-in;
+    border-radius:9px;
+}
+#nav .container .collapse ul li:hover:after{
+    transform:scaleX(1);
+}
+#nav .container .collapse ul li a{
+    color:#000;
+}
+#nav .container .collapse ul li a:hover{
+    color:#fff;
+    z-index:2;
+}
+#nav .container .navbar-header .navbar-toggle{
+    font-size:30px;
+}
+@media only screen and (max-width:1200px){
+    #nav .container .navbar-header a{
+        font-size:52px;
+    }
+    #nav .container .collapse ul li{
+        animation:none;
+    }
+    #nav .container .collapse ul li:hover{
+        animation:none;
+    }
+}
+@media only screen and (orientation:landscape){
+    #nav{
+        animation:none;
+    }
+}
+/*Navigation bar styling ends*/
+/*Designing for the form starts*/
+#cont2{
+    width:100%;
+    height:133vh;
+    background-color:black;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    text-align:center;
+    font-size:25px;
+}
+#cont2 h1{
+    font-size:60px;
+    margin-bottom:40px;
+}
+#cont2 input{
+    width:50%;
+    text-align:center;
+    border-radius:20px;
+    color:#000;
+    letter-spacing:2px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#cont2 .form-group label{
+    letter-spacing:2px;
+}
+#cont2 .form-group .emlabel
+{
+    margin-top:24px;
+}
+#cont2 textarea{
+    width:50%;
+    height:30vh;
+    text-align:center;
+    color:#000;
+    border-radius:20px;
+    letter-spacing:2px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#cont2 button[type="submit"]{
+    width:15%;
+    background-color:#000;
+    color:#fff;
+    font-size:25px;
+    border:1.5px solid #fff;
+    border-radius:20px;
+    border-style:outset;
+    position:relative;
+}
+#cont2 button[type="submit"] span{
+    position:relative;
+    z-index:1;
+}
+#cont2 button[type="submit"]::after{
+    content:'';
+    width:100%;
+    height:100%;
+    background-color:white;
+    border-radius:20px;
+    position:absolute;
+    left:0%;
+    z-index:0;
+    transform:scaleX(0);
+    transition:all 0.3s ease-in;
+}
+#cont2 button[type="submit"]:hover{
+    color:#000;
+}
+#cont2 button[type="submit"]:hover::after{
+    transform:scaleX(1);
+}
+#status{
+    width:30%;
+    height:15%;
+    background-color:rgb(105, 102, 102);
+    color:white;
+    margin:0 auto;
+    margin-top:30px;
+    display:none;
+    margin-bottom:5%;
+}
+#status.success{
+    animation:zoomIn 1s;
+    display:block;
+}
+@media only screen and (max-width:1200px){
+    #cont2{
+        font-size:20px;
+    }
+    #cont2 input{
+        width:85%;
+    }
+    #cont2 textarea{
+        width:85%;
+        height:20vh;
+    }
+    #cont2 button[type="submit"]{
+        width:25%;
+    }
+    #cont2 button[type="submit"],
+    #cont2 button[type="submit"]::after{
+        transition:none;
+    }
+    #status.success{
+        width:75%;
+        font-size:20px;
+        display:flex;
+        flex-direction:row;
+        justify-content:center;
+        text-align:center;
+        align-items:center;
+
+    }
+}
+@media only screen and (max-width:1200px) and (orientation:landscape){
+    #cont2{
+        width:100%;
+        height:225vh;
+        font-size:20px;
+        padding-top:100px;
+    }
+}
+/*Designing for the form ends*/
+/*Designing for the footer starts*/
+#footer{
+    width:100%;
+    height:10vh;
+    background-color:white;
+    text-align:center;
+    font-size:50px;
+}
+#footer .fa{
+    color:black;
+    text-decoration:none;
+}
+#footer .fa-github{
+    transition:color 0.3s ease-in;
+}
+#footer .fa-github:hover{
+    color:grey;
+    animation:pulse 1s infinite;
+}
+#footer .fa-linkedin{
+    transition:color 0.3s ease-in;
+}
+#footer .fa-linkedin:hover{
+    color:royalblue;
+    animation:pulse 1s infinite;
+}
+#footer .fa-envelope:hover{
+    color:red;
+    animation:pulse 1s infinite;
+}
+/*Designing for the footer ends*/

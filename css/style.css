@@ -1,0 +1,251 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:Boricua;
+}
+@font-face{
+    font-family:Boricua;
+    src:url(../fonts/Boricua.ttf);
+}
+@font-face{
+    font-family:varsity;
+    src:url(../fonts/Varsity.ttf);
+}
+body{
+    width:100%;
+    height:100%;
+}
+#loader{
+    width:100%;
+    height:100vh;
+    background:#000 url(../port-img/loading-38.gif) no-repeat center;
+    position:fixed;
+    z-index:3;
+}
+/*Navigation abr styling starts*/
+#nav{
+    background-color:white;
+    font-size:30px;
+    border:none;
+    padding:10px 0px;
+}
+#nav .container .navbar-header .change .two,
+#nav .container .navbar-header .change.open .one,
+#nav .container .navbar-header .change.open .three{
+    transition:transform 0.3s ease-in;
+}
+/*Animation for menu-button*/
+#nav .container .navbar-header .change.open .two{
+    transform:translateX(-20px);
+    opacity:0;
+}
+#nav .container .navbar-header .change.open .one{
+    transform:rotate(40deg) translateX(4px) translateY(5px);
+}
+#nav .container .navbar-header .change.open .three{
+    transform:rotate(-40deg) translateX(2px) translateY(-5px);
+}
+/*Animation for menu-button*/
+#nav .container .navbar-header a{
+    font-size:70px;
+    font-family:varsity;
+    color:#000;
+    animation:lightSpeedInRight;
+    animation-duration:3s;
+    animation-delay:1999ms;
+}
+#nav .container .collapse ul li{
+    display:block;
+    position:relative;
+    animation:lightSpeedInLeft;
+    animation-duration:3s;
+    animation-delay:1999ms;
+}
+#nav .container .collapse ul li:after{
+    content:'';
+    position:absolute;
+    background-color:#000;
+    height:2px;
+    width:82%;
+    height:80%;
+    left:10%;
+    top:10%;
+    transform:scaleX(0);
+    transition:all 0.5s ease-in;
+    border-radius:9px;
+}
+#nav .container .collapse ul li:hover:after{
+    transform:scaleX(1);
+}
+#nav .container .collapse ul li a{
+    color:#000;
+}
+#nav .container .collapse ul li a:hover{
+    color:#fff;
+    z-index:2;
+}
+#nav .container .navbar-header .navbar-toggle{
+    font-size:30px;
+}
+@media only screen and (max-width:1200px){
+    #nav .container .navbar-header a{
+        font-size:52px;
+    }
+    #nav .container .collapse ul li{
+        animation:none;
+    }
+    #nav .container .collapse ul li:hover{
+        animation:none;
+    }
+}
+@media only screen and (orientation:landscape){
+    #nav{
+        animation:none;
+    }
+}
+/*Navigation bar styling ends*/
+/*Banner styling starts*/
+#cont1{
+    width:100%;
+    height:100vh;
+    justify-content:center;
+    text-align:center;
+    padding:0;
+    display:block;
+}
+#cont1 .banner{
+    width:50%;
+    height:100%;
+    background-color:#000;
+    color:white;
+}
+#cont1 .banner h1{
+    width:70%;
+    margin:0 auto;
+    padding:20px 0px;
+    font-size:70px;
+    position:relative;
+    top:230px;
+    animation:zoomIn 1.8s 1999ms;
+    cursor:pointer;
+    background-color:transparent;
+}
+#cont1 .banner h1::before{
+    content:'';
+    background-color:white;
+    width:0;
+    height:2px;
+    left:0;
+    top:10px;
+    position:absolute;
+    transition:width 0.7s ease-in;
+}
+#cont1 .banner h1::after{
+    content:'';
+    background-color:white;
+    width:0;
+    height:2px;
+    top:100px;
+    right:0;
+    position:absolute;
+    transition:width 0.7s ease-in;
+}
+#cont1 .banner h1:hover::before{
+    width:100%;
+}
+#cont1 .banner h1:hover::after{
+    width:100%;
+}
+#cont1 .about{
+    width:50%;
+}
+#cont1 .about p::before{
+    content:'';
+    background-color:black;
+    width:0;
+    height:2px;
+    left:0;
+    top:10px;
+    position:absolute;
+    transition:all 0.7s ease-in;
+}
+#cont1 .about p::after{
+    content:'';
+    background-color:black;
+    width:0;
+    height:2px;
+    top:190px;
+    right:0;
+    position:absolute;
+    transition:all 0.7s ease-in;
+}
+#cont1 .about p:hover::before{
+    width:100%;
+}
+#cont1 .about p:hover::after{
+    width:100%;
+}
+#cont1 .about p{
+    width:90%;
+    padding:20px 0px;
+    font-size:35px;
+    margin:0 auto;
+    position:relative;
+    top:200px;
+    cursor:pointer;
+    animation:zoomIn;
+    animation-duration:3.5s;
+    animation-delay:1999ms
+}
+@media only screen and (max-width:1200px){
+    #cont1 .banner h1:hover::before,#cont1 .banner h1:hover::after,
+    #cont1 .about p:hover::before,#cont1 .about p:hover::after{
+        transform:scaleX(0);
+    }
+}
+@media only screen and (max-width:1200px){
+    #cont1 .banner{
+        width:100%;
+        height:50%;
+        color:black;
+        background-color:white;
+    }
+    #cont1 .about{
+        width:100%;
+        height:60%;
+        color:white;
+        background-color:black;
+    }
+    #cont1 .about p{
+        top:80px;
+        font-size:30px;
+    }
+    #cont1 .banner h1{
+        top:130px;
+        font-size:50px;
+    }   
+}
+@media only screen and (max-width:1200px) and (min-width:1000px){
+    #cont1 .about{
+        height:80%;
+    }
+    #cont1 .about p{
+        font-size:70px;
+    }
+    #cont1 .banner h1{
+        font-size:90px;
+    } 
+}
+@media only screen and (max-width:1000px) and (orientation:landscape){
+    #cont1 .about{
+        width:100%;
+        height:140%;
+        position:relative;
+        top:140;
+    }
+    #cont1 .about p{
+        width:100%;
+    }
+}
+/*Banner styling ends*/

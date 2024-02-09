@@ -1,0 +1,202 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:Boricua;
+}
+@font-face{
+    font-family:Boricua;
+    src:url(../fonts/Boricua.ttf);
+}
+@font-face{
+    font-family:varsity;
+    src:url(../fonts/Varsity.ttf);
+}
+body{
+    width:100%;
+    height:100%;
+}
+#loader{
+    width:100%;
+    height:100vh;
+    background:#000 url(../port-img/loading-38.gif) no-repeat center;
+    position:fixed;
+    z-index:3;
+}
+/*Navigation abr styling starts*/
+#nav{
+    background-color:white;
+    font-size:30px;
+    border:none;
+    padding:10px 0px;
+}
+#nav .container .navbar-header .change .two,
+#nav .container .navbar-header .change.open .one,
+#nav .container .navbar-header .change.open .three{
+    transition:transform 0.3s ease-in;
+}
+/*Animation for menu-button*/
+#nav .container .navbar-header .change.open .two{
+    transform:translateX(-20px);
+    opacity:0;
+}
+#nav .container .navbar-header .change.open .one{
+    transform:rotate(40deg) translateX(4px) translateY(5px);
+}
+#nav .container .navbar-header .change.open .three{
+    transform:rotate(-40deg) translateX(2px) translateY(-5px);
+}
+/*Animation for menu-button*/
+#nav .container .navbar-header a{
+    font-size:70px;
+    font-family:varsity;
+    color:#000;
+    animation:lightSpeedInRight;
+    animation-duration:3s;
+}
+#nav .container .collapse ul li{
+    display:block;
+    position:relative;
+    animation:lightSpeedInLeft;
+    animation-duration:3s;
+}
+#nav .container .collapse ul li:after{
+    content:'';
+    position:absolute;
+    background-color:#000;
+    height:2px;
+    width:82%;
+    height:80%;
+    left:10%;
+    top:10%;
+    transform:scaleX(0);
+    transition:all 0.5s ease-in;
+    border-radius:9px;
+}
+#nav .container .collapse ul li:hover:after{
+    transform:scaleX(1);
+}
+#nav .container .collapse ul li a{
+    color:#000;
+}
+#nav .container .collapse ul li a:hover{
+    color:#fff;
+    z-index:2;
+}
+#nav .container .navbar-header .navbar-toggle{
+    font-size:30px;
+}
+@media only screen and (max-width:1200px){
+    #nav .container .navbar-header a{
+        font-size:52px;
+    }
+    #nav .container .collapse ul li{
+        animation:none;
+    }
+    #nav .container .collapse ul li:hover{
+        animation:none;
+    }
+}
+@media only screen and (orientation:landscape){
+    #nav{
+        animation:none;
+    }
+}
+/*Navigation bar styling ends*/
+/*Banner designing starts*/
+.wrapper{
+    width:100%;
+    height:45vh;
+    background-color:black;
+    color:white;
+    text-align:center;
+}
+.wrapper .container{
+    width:80%;
+}
+.wrapper .container h1{
+    font-size:90px;
+    margin-top:70px;
+    animation:zoomIn 1.2s;
+}
+.wrapper .container p{
+    font-size:30px;
+    animation:fadeInUp 1.2s;
+    letter-spacing:2px;
+}
+/*Banner designing ends*/
+/*Project section starts*/
+#cont1{
+    width:93%;
+    padding:35px 0px;
+}
+#cont1 .row .col-lg-4{
+    width:47vw;
+    text-align:center;
+    margin-bottom:5%;
+}
+#cont1 .row .col-lg-4 .card1{
+    width:45vw;
+    height:55vh;
+    border-style:none;
+    border-radius:15px;
+    transition:box-shadow 0.3s ease-in;
+    cursor:pointer;
+}
+#cont1 .row .col-lg-4 .card1:hover{
+    box-shadow:1px 5px 15px black;
+}
+#cont1 .row .col-lg-4 .ih-item a .img{
+    width:100%;
+    height:100%;
+}
+#cont1 .row .col-lg-4 .ih-item a .info h3{
+    font-size:50px;
+    letter-spacing:2px;
+}
+#cont1 .row .col-lg-4 .ih-item a .info p{
+    font-size:15px;
+    letter-spacing:2px;
+    font-weight:100;
+    font-family:Arial, Helvetica, sans-serif;
+    color:white;
+}
+#cont1 .row .col-lg-4 .fa{
+    font-size:50px;
+    color:#000;
+    text-decoration:none;
+    transform:scale(1);
+    transition:all 0.3s ease-in;
+    margin-top:15px;
+}
+#cont1 .row .col-lg-4 .fa:hover{
+    opacity:0.3;
+    transform:scale(1.2);
+}
+@media only screen and (max-width:1200px){
+    #cont1 .row .col-lg-4{
+        width:95vw;
+        margin-bottom:35px;
+    }
+    #cont1 .row .col-lg-4 .card1{
+        width:93vw;
+        height:30vh;
+        font-size:20px;
+    }
+    #cont1 .row .col-lg-4 .ih-item a .info h3{
+        font-size:25px;
+    }
+    #cont1 .row .col-lg-4 .ih-item a .info p{
+        font-size:12px;
+        font-weight:bolder;
+    }
+}
+@media only screen and (max-width:1200px) and (orientation:landscape){
+    .wrapper{
+        height:85vh;
+    }
+    #cont1 .row .col-lg-4 .card1{
+        height:70vh;
+    }
+}
+/*Project section ends*/

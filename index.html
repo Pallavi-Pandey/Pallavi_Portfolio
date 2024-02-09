@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Pallavi Pandey</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" /> 
+        <meta http-equiv="X-UA-compatible" content="IE-edge">
+        <meta name="description" content="Welcome to my portfolio website!">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="shortcut icon" type="img/png" href="port-img/logo.jpg">
+        <link href="css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <script src="https://use.fontawesome.com/66373e75ac.js"></script>
+    </head>
+    <body>
+    <div id="loader"></div>
+    <!--Navigation bar starts-->
+    <nav class="navbar navbar-default" id="nav">
+    <div class="container school-options-dropdown text-center">
+        <div class="navbar-header">
+            <button class="navbar-toggle change" data-toggle="collapse" data-target="#dropdown">
+                <span class="icon-bar one"></span>
+                <span class="icon-bar two"></span>
+                <span class="icon-bar three"></span>
+            </button>
+            <a class="navbar-brand" href="index">Pallavi</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-right" id="dropdown">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="https://drive.google.com/file/d/1vyn2xDv761-pXq6M6l4R5xrI-MYMWdZF/view?usp=sharing" target="_blank">Resume</a></li>
+                <li><a href="form.html">Contact Me</a></li>
+            </ul>
+        </div>
+    </div>
+    </nav>
+    <!--Navigation bar ends-->
+    <!--Banner starts-->
+    <div class="container" id="cont1">
+        <div class="banner col-lg-6">
+            <h1>Hello there!</h1>
+        </div>
+        <div class="about col-lg-6">
+            <p style="font-size:40px;">I'm <span style="font-weight:bolder; font-size:50px; letter-spacing:2px;">Pallavi Pandey</span> , <br>a Learner and Developer.</p>
+        </div>
+    </div>
+    <!--Banner ends-->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            //Javascript code for intro loader
+            var loader = document.getElementById('loader');
+            var time=2000;
+            setTimeout(function myFunction(){
+                loader.style.display='none';
+            },time);
+        </script> 
+        <script src="js/script.js"></script>
+        <script>
+          AOS.init({
+              offset:300,
+              duration:2000,
+              anchorPlacement:'top-bottom',
+          })
+        </script> 
+    </body>
+</html>
